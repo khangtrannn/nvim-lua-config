@@ -1,3 +1,6 @@
 require('plugins')
-require('colorscheme-config')
+require('options')
 require('treesitter-config')
+require('lualine-config')
+require('bufferline-config')
+require('colorscheme-config')
