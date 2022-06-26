@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
   use { 'folke/which-key.nvim' }
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   use 'neovim/nvim-lspconfig'
@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
-      require('gitsigns').setup{ current_line_blame = true }
+      require('gitsigns').setup { current_line_blame = true }
     end
   }
 
@@ -57,5 +57,8 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
 
   use { "folke/zen-mode.nvim", config = 'require("zen-mode-config")' }
+
   use { "folke/twilight.nvim", config = "require('twilight-config')" }
+
+  use { "akinsho/toggleterm.nvim", tag = 'v1.*' }
 end)
