@@ -28,6 +28,11 @@ local mappings = {
     n = { '<cmd>Lspsaga diagnostic_jump_next<cr>', "Go To Next Diagnostic" },
     N = { '<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic" }
   },
+  z = {
+    name = "Focus",
+    z = { ":ZenMode<cr>", "Toggle Zen Mode" },
+    t = { ":Twilight<cr>", "Toggle Twilight" }
+  },
 }
 
 local opts = { prefix = '<leader>' }

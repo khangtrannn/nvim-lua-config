@@ -55,4 +55,7 @@ return require('packer').startup(function(use)
 
   use 'glepnir/dashboard-nvim'
   use "lukas-reineke/indent-blankline.nvim"
+
+  use { "folke/zen-mode.nvim", config = 'require("zen-mode-config")' }
+  use { "folke/twilight.nvim", config = "require('twilight-config')" }
 end)
