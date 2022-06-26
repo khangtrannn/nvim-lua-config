@@ -1,51 +1,97 @@
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'shaunsingh/nord.nvim'
+
+  use { 'rose-pine/neovim', config = "vim.cmd('colorscheme rose-pine')" }
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
+    event = "BufWinEnter",
+    config = "require('treesitter-config')"
   }
+
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    'tamton-aquib/staline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    event = "BufWinEnter",
+    config = "require('staline-config')"
   }
-  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v2.*",
+    requires = 'kyazdani42/nvim-web-devicons',
+    event = "BufWinEnter",
+    config = "require('bufferline-config')"
+  }
+
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'kyazdani42/nvim-web-devicons',
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    tag = 'nightly',
+    -- cmd = "NvimTreeToggle",
+    config = "require('nvim-tree-config')"
   }
-  use { 'windwp/nvim-ts-autotag' }
-  use { 'p00f/nvim-ts-rainbow' }
+
+  use {
+    'windwp/nvim-ts-autotag',
+    event = 'InsertEnter',
+    after = 'nvim-treesitter'
+  }
+
+  use {
+    'p00f/nvim-ts-rainbow',
+    after = 'nvim-treesitter'
+  }
+
   use {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    config = "require('autopairs-config')",
+    after = "nvim-cmp"
   }
-  use { 'folke/which-key.nvim' }
+
+  use {
+    'folke/which-key.nvim',
+    event = 'BufWinEnter',
+    config = "require('whichkey-config')"
+  }
+
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { { 'nvim-lua/plenary.nvim' } },
+    cmd = "Telescope",
+    config = "require('telescope-config')"
   }
-
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/nvim-cmp'
-  use 'onsails/lspkind-nvim'
 
   use {
-    "williamboman/nvim-lsp-installer",
+    'neovim/nvim-lspconfig',
+    config = "require('lsp')"
   }
 
-  use { 'jose-elias-alvarez/null-ls.nvim', config = "require('null-ls-config')" }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-vsnip' }
+  use { 'hrsh7th/vim-vsnip' }
+  use { 'onsails/lspkind-nvim' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
 
-  use 'norcalli/nvim-colorizer.lua'
+  use { "williamboman/nvim-lsp-installer" }
+
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = "require('null-ls-config')"
+  }
+
+  use {
+    'norcalli/nvim-colorizer.lua',
+    event = 'BufRead',
+    config = "require('colorizer-config')"
+  }
+
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
@@ -53,14 +99,37 @@ return require('packer').startup(function(use)
     end
   }
 
-  use 'glepnir/dashboard-nvim'
-  use "lukas-reineke/indent-blankline.nvim"
+  use {
+    'glepnir/dashboard-nvim',
+    cmd = 'Dashboard',
+    config = "require('dashboard-config')"
+  }
 
-  use { "folke/zen-mode.nvim", config = 'require("zen-mode-config")' }
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    event = 'BufRead',
+    config = "require('blankline-config')"
+  }
 
-  use { "folke/twilight.nvim", config = "require('twilight-config')" }
+  use {
+    "folke/zen-mode.nvim",
+    config = 'require("zen-mode-config")'
+  }
 
-  use { "akinsho/toggleterm.nvim", tag = 'v1.*' }
+  use {
+    "folke/twilight.nvim",
+    config = "require('twilight-config')"
+  }
 
-  use 'terrortylor/nvim-comment'
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = 'v1.*',
+    config = "require('toggleterm-config')"
+  }
+
+  use {
+    'terrortylor/nvim-comment',
+    cmd = "CommandToggle",
+    config = "require('comment-config')",
+  }
 end)

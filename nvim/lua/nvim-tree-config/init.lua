@@ -1,6 +1,6 @@
 vim.g.nvim_tree_width = 25
 
-require 'nvim-tree'.setup { 
+require 'nvim-tree'.setup {
   open_on_setup = true,
   open_on_setup_file = true,
   renderer = {
