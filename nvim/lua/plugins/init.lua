@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'shaunsingh/nord.nvim'
@@ -21,7 +21,7 @@ return require('packer').startup(function()
   use { 'windwp/nvim-ts-autotag' }
   use { 'p00f/nvim-ts-rainbow' }
   use {
-    "windwp/nvim-autopairs", 
+    "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
   use { 'folke/which-key.nvim' }
@@ -41,6 +41,18 @@ return require('packer').startup(function()
 
   use {
     "williamboman/nvim-lsp-installer",
-    "neovim/nvim-lspconfig",
   }
+
+  use { 'jose-elias-alvarez/null-ls.nvim', config = "require('null-ls-config')" }
+
+  use 'norcalli/nvim-colorizer.lua'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup{ current_line_blame = true }
+    end
+  }
+
+  use 'glepnir/dashboard-nvim'
+  use "lukas-reineke/indent-blankline.nvim"
 end)

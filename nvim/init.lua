@@ -9,6 +9,7 @@ require('autopairs-config')
 require('whichkey-config')
 require('telescope-config')
 require('lsp')
+require('colorizer-config')
+require('blankline-config')
+require('null-ls-config')
 require('colorscheme-config')
-
-
