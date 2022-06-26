@@ -61,4 +61,6 @@ return require('packer').startup(function(use)
   use { "folke/twilight.nvim", config = "require('twilight-config')" }
 
   use { "akinsho/toggleterm.nvim", tag = 'v1.*' }
+
+  use 'terrortylor/nvim-comment'
 end)
