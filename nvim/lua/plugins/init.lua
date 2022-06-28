@@ -11,7 +11,9 @@ return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
 
-    use { 'rose-pine/neovim', config = "vim.cmd('colorscheme rose-pine')" }
+    -- use { 'rose-pine/neovim', config = "vim.cmd('colorscheme rose-pine')" }
+    -- use { 'navarasu/onedark.nvim', config = "require('colorscheme-config')" }
+    use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
 
     use {
       'nvim-treesitter/nvim-treesitter',
