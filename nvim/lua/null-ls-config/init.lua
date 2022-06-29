@@ -7,23 +7,23 @@ null_ls.setup({
     formatting.prettier,
     formatting.lua_format.with({
       extra_args = {
-        '--no-keep-simple-function-one-line', '--no-break-after-operator',
+        '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
         '--break-after-table-lb', '--indent-width=2'
       }
     }),
-    null_ls.builtins.code_actions.eslint_d,
+    formatting.codespell.with({ filetypes = { 'markdown' } })
   },
   on_attach = function(client)
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
-    end
+    -- Find the clients capabilities
+    local cap = client.resolved_capabilities
 
-    vim.cmd [[
-      augroup document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]]
+    -- Only highlight if compatible with the language
+    if cap.document_highlight then
+      vim.cmd('augroup LspHighlight')
+      vim.cmd('autocmd!')
+      vim.cmd('autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()')
+      vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
+      vim.cmd('augroup END')
+    end
   end
 })
