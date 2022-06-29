@@ -136,11 +136,7 @@ return require('packer').startup({
       config = "require('toggleterm-config')"
     }
 
-    use {
-      'terrortylor/nvim-comment',
-      cmd = "CommandToggle",
-      config = "require('comment-config')",
-    }
+    use { "terrortylor/nvim-comment", config = "require('comment-config')" }
 
     use {
       'tami5/lspsaga.nvim',
