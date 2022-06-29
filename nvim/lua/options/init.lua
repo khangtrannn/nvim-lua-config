@@ -35,4 +35,5 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.opt.list = true
--- vim.opt.listchars:append("space:⋅")
+vim.o.swapfile = false
+vim.opt.listchars:append("space:⋅")
