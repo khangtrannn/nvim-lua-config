@@ -11,8 +11,6 @@ return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use { 'rose-pine/neovim', config = "vim.cmd('colorscheme rose-pine')" }
-    -- use { 'navarasu/onedark.nvim', config = "require('colorscheme-config')" }
     use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
 
     use {
@@ -23,10 +21,10 @@ return require('packer').startup({
     }
 
     use {
-      'tamton-aquib/staline.nvim',
+      'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
       event = "BufWinEnter",
-      config = "require('staline-config')"
+      config = "require('lualine-config')"
     }
 
     use {
@@ -43,7 +41,6 @@ return require('packer').startup({
         'kyazdani42/nvim-web-devicons',
       },
       tag = 'nightly',
-      -- cmd = "NvimTreeToggle",
       config = "require('nvim-tree-config')"
     }
 
