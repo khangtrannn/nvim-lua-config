@@ -137,7 +137,10 @@ return require('packer').startup({
       'tami5/lspsaga.nvim',
       config = "require('lspsaga-config')"
     }
+
+    use { 'softoika/ngswitcher.vim' }
   end,
+
   config = {
     display = {
       open_fn = function()
