@@ -126,11 +126,6 @@ return require('packer').startup({
     }
 
     use {
-      "folke/twilight.nvim",
-      config = "require('twilight-config')"
-    }
-
-    use {
       "akinsho/toggleterm.nvim",
       tag = 'v1.*',
       config = "require('toggleterm-config')"

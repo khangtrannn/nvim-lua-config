@@ -35,6 +35,7 @@ local mappings = {
   x = { ":bdelete<cr>", "Close" },
   f = { ":Telescope find_files<cr>", "Telescope Find Files" },
   r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
+  z = { ":ZenMode<cr>", "Toggle Zen Mode" },
   l = {
     name = "LSP",
     i = { ":LspInfo<cr>", "Connected Language Servers" },
@@ -55,11 +56,6 @@ local mappings = {
     e = { '<cmd>Lspsaga show_line_diagnostics<cr>', "Show Line Diagnostics" },
     n = { '<cmd>Lspsaga diagnostic_jump_next<cr>', "Go To Next Diagnostic" },
     N = { '<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic" }
-  },
-  z = {
-    name = "Focus",
-    z = { ":ZenMode<cr>", "Toggle Zen Mode" },
-    t = { ":Twilight<cr>", "Toggle Twilight" }
   },
   t = {
     t = { ":ToggleTerm<cr>", "Split Below" },
