@@ -33,9 +33,15 @@ local mappings = {
   Q = { ":wq<cr>", "Save & Quit" },
   w = { ":w<cr>", "Save" },
   x = { ":bdelete<cr>", "Close" },
-  f = { ":Telescope find_files<cr>", "Telescope Find Files" },
-  r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
   z = { ":ZenMode<cr>", "Toggle Zen Mode" },
+  f = {
+    f = { ":Telescope find_files<cr>", "Telescope Find Files" },
+    r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
+  },
+  e = {
+    name = "Search config files",
+    n = { ":Telescope find_files cwd=~/.config/nvim <cr>", "Nvim Config" }
+  },
   l = {
     name = "LSP",
     i = { ":LspInfo<cr>", "Connected Language Servers" },

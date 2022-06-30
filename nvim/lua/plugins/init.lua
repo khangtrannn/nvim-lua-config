@@ -74,6 +74,8 @@ return require('packer').startup({
       config = "require('telescope-config')"
     }
 
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
     use {
       'neovim/nvim-lspconfig',
       config = "require('lsp')"
