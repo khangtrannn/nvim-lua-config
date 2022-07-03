@@ -18,10 +18,22 @@ wk.setup {
 }
 
 local Terminal = require('toggleterm.terminal').Terminal
+
+local toggle_vertical = function()
+  local float = Terminal:new({ direction = "vertical" })
+  return float:toggle()
+end
+
+local toggle_tab = function()
+  local float = Terminal:new({ direction = "tab" })
+  return float:toggle()
+end
+
 local toggle_float = function()
   local float = Terminal:new({ direction = "float" })
   return float:toggle()
 end
+
 local toggle_lazygit = function()
   local lazygit = Terminal:new({ cmd = 'lazygit', direction = "float" })
   return lazygit:toggle()
@@ -34,10 +46,8 @@ local mappings = {
   w = { ":w<cr>", "Save" },
   x = { ":bdelete<cr>", "Close" },
   z = { ":ZenMode<cr>", "Toggle Zen Mode" },
-  f = {
-    f = { ":Telescope find_files<cr>", "Telescope Find Files" },
-    r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
-  },
+  f = { ":Telescope find_files<cr>", "Telescope Find Files" },
+  r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
   e = {
     name = "Search config files",
     n = { ":Telescope find_files cwd=~/.config/nvim <cr>", "Nvim Config" }
@@ -64,7 +74,9 @@ local mappings = {
     N = { '<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic" }
   },
   t = {
-    t = { ":ToggleTerm<cr>", "Split Below" },
+    s = { ":ToggleTerm<cr>", "Split Below" },
+    v = { toggle_vertical, "Vsplit Terminal" },
+    t = { toggle_tab, "Tab Terminal" },
     f = { toggle_float, "Floating Terminal" },
     l = { toggle_lazygit, "LazyGit" }
   },
