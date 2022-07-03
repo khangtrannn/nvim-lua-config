@@ -76,22 +76,26 @@ return require('packer').startup({
 
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+    -- Enable LSP
     use {
       'neovim/nvim-lspconfig',
       config = "require('lsp')"
     }
 
-    use { 'hrsh7th/nvim-cmp' }
+    use { "williamboman/nvim-lsp-installer" } -- Simple language server install
+
+    -- Completion
+    use { 'hrsh7th/nvim-cmp' } -- The completion plugin
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-buffer' } -- Buffer completion
     use { 'hrsh7th/cmp-vsnip' }
-    use { 'hrsh7th/vim-vsnip' }
+    use { 'hrsh7th/cmp-nvim-lua' } -- Lua completion
+    use { 'hrsh7th/vim-vsnip' } -- Snipet completion
     use { 'onsails/lspkind-nvim' }
-    use { 'hrsh7th/cmp-path' }
-    use { 'hrsh7th/cmp-cmdline' }
+    use { 'hrsh7th/cmp-path' } -- Path completion
+    use { 'hrsh7th/cmp-cmdline' } -- Command completion
 
-    use { "williamboman/nvim-lsp-installer" }
-
+    -- For formatting and linting
     use {
       'jose-elias-alvarez/null-ls.nvim',
       config = "require('null-ls-config')"
@@ -110,11 +114,12 @@ return require('packer').startup({
       end
     }
 
-    use {
-      'glepnir/dashboard-nvim',
-      cmd = 'Dashboard',
-      config = "require('dashboard-config')"
-    }
+    -- Doesn't use for now
+    -- use {
+    --   'glepnir/dashboard-nvim',
+    --   cmd = 'Dashboard',
+    --   config = "require('dashboard-config')"
+    -- }
 
     use {
       "lukas-reineke/indent-blankline.nvim",

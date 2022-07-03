@@ -11,7 +11,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 )
 
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'html', 'javascript', 'typescript', 'lua', 'java', 'scss', 'css' },
+  ensure_installed = { 'html', 'javascript', 'typescript', 'lua', 'java', 'scss', 'css', 'vim' },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,

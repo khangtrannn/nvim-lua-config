@@ -68,6 +68,12 @@ local mappings = {
     f = { toggle_float, "Floating Terminal" },
     l = { toggle_lazygit, "LazyGit" }
   },
+  s = {
+    name = "Angular Swithcer",
+    t = { "<cmd>NgSwitchTS<cr>", "Switch to TS" },
+    h = { "<cmd>NgSwitchHTML<cr>", "Switch to HTML" },
+    s = { "<cmd>NgSwitchCSS<cr>", "Switch to Style" },
+  },
 }
 
 local opts = { prefix = '<leader>' }
