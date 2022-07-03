@@ -146,6 +146,8 @@ return require('packer').startup({
     }
 
     use { 'softoika/ngswitcher.vim' }
+
+    use {'kevinhwang91/nvim-bqf', config = "require('bqf-config')"}
   end,
 
   config = {
