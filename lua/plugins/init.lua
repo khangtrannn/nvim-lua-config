@@ -22,7 +22,7 @@ return require('packer').startup({
 
     use {
       'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true },
       event = "BufWinEnter",
       config = "require('lualine-config')"
     }
@@ -30,17 +30,16 @@ return require('packer').startup({
     use {
       'akinsho/bufferline.nvim',
       tag = "v2.*",
-      requires = 'kyazdani42/nvim-web-devicons',
+      requires = 'nvim-tree/nvim-web-devicons',
       event = "BufWinEnter",
       config = "require('bufferline-config')"
     }
 
     use {
-      'kyazdani42/nvim-tree.lua',
+      'nvim-tree/nvim-tree.lua',
       requires = {
-        'kyazdani42/nvim-web-devicons',
+        'nvim-tree/nvim-web-devicons',
       },
-      tag = 'nightly',
       config = "require('nvim-tree-config')"
     }
 
@@ -50,10 +49,7 @@ return require('packer').startup({
       after = 'nvim-treesitter'
     }
 
-    use {
-      'p00f/nvim-ts-rainbow',
-      after = 'nvim-treesitter'
-    }
+    -- p00f/nvim-ts-rainbow is deprecated, using HiPhish/rainbow-delimiters.nvim instead
 
     use {
       "windwp/nvim-autopairs",
@@ -134,7 +130,6 @@ return require('packer').startup({
 
     use {
       "akinsho/toggleterm.nvim",
-      tag = 'v1.*',
       config = "require('toggleterm-config')"
     }
 
