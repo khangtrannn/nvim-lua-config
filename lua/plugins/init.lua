@@ -1,155 +1,54 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({
-    'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path
-  })
-  vim.api.nvim_command('packadd packer.nvim')
+  fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  vim.cmd [[packadd packer.nvim]]
 end
 
-return require('packer').startup({
-  function(use)
-    use 'wbthomason/packer.nvim'
+return require('packer').startup(function(use)
+  use 'wbthomason/packer.nvim'
 
-    use { 'Mofiqul/dracula.nvim', config = "require('colorscheme-config')" }
-
-    use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ":TSUpdate",
-      event = "BufWinEnter",
-      config = "require('treesitter-config')"
-    }
-
-    use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-      event = "BufWinEnter",
-      config = "require('lualine-config')"
-    }
-
-    use {
-      'akinsho/bufferline.nvim',
-      tag = "v2.*",
-      requires = 'nvim-tree/nvim-web-devicons',
-      event = "BufWinEnter",
-      config = "require('bufferline-config')"
-    }
-
-    use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons',
-      },
-      config = "require('nvim-tree-config')"
-    }
-
-    use {
-      'windwp/nvim-ts-autotag',
-      event = 'InsertEnter',
-      after = 'nvim-treesitter'
-    }
-
-    -- p00f/nvim-ts-rainbow is deprecated, using HiPhish/rainbow-delimiters.nvim instead
-
-    use {
-      "windwp/nvim-autopairs",
-      config = "require('autopairs-config')",
-      after = "nvim-cmp"
-    }
-
-    use {
-      'folke/which-key.nvim',
-      event = 'BufWinEnter',
-      config = "require('whichkey-config')"
-    }
-
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { { 'nvim-lua/plenary.nvim' } },
-      cmd = "Telescope",
-      config = "require('telescope-config')"
-    }
-
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
-    -- Enable LSP
-    use {
-      'neovim/nvim-lspconfig',
-      config = "require('lsp')"
-    }
-
-    use { "williamboman/nvim-lsp-installer" } -- Simple language server install
-
-    -- Completion
-    use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-    use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'hrsh7th/cmp-buffer' } -- Buffer completion
-    use { 'hrsh7th/cmp-vsnip' }
-    use { 'hrsh7th/cmp-nvim-lua' } -- Lua completion
-    use { 'hrsh7th/vim-vsnip' } -- Snipet completion
-    use { 'onsails/lspkind-nvim' }
-    use { 'hrsh7th/cmp-path' } -- Path completion
-    use { 'hrsh7th/cmp-cmdline' } -- Command completion
-
-    -- For formatting and linting
-    use {
-      'jose-elias-alvarez/null-ls.nvim',
-      config = "require('null-ls-config')"
-    }
-
-    use {
-      'norcalli/nvim-colorizer.lua',
-      event = 'BufRead',
-      config = "require('colorizer-config')"
-    }
-
-    use {
-      'lewis6991/gitsigns.nvim',
-      config = function()
-        require('gitsigns').setup { current_line_blame = true }
-      end
-    }
-
-    -- Doesn't use for now
-    -- use {
-    --   'glepnir/dashboard-nvim',
-    --   cmd = 'Dashboard',
-    --   config = "require('dashboard-config')"
-    -- }
-
-    use {
-      "lukas-reineke/indent-blankline.nvim",
-      event = 'BufRead',
-      config = "require('blankline-config')"
-    }
-
-    use {
-      "folke/zen-mode.nvim",
-      config = 'require("zen-mode-config")'
-    }
-
-    use {
-      "akinsho/toggleterm.nvim",
-      config = "require('toggleterm-config')"
-    }
-
-    use { "terrortylor/nvim-comment", config = "require('comment-config')" }
-
-    use {
-      'tami5/lspsaga.nvim',
-      config = "require('lspsaga-config')"
-    }
-
-    use { 'softoika/ngswitcher.vim' }
-
-    use {'kevinhwang91/nvim-bqf', config = "require('bqf-config')"}
-  end,
-
-  config = {
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end
-    }
+  use {
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require('github-theme').setup({
+        options = {
+          transparent = false,
+        },
+      })
+    end,
   }
-})
+
+  use { 'nvim-lua/plenary.nvim' }
+
+  use {
+    'epwalsh/obsidian.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('obsidian').setup({
+        workspaces = {
+          { name = 'second-brain', path = '~/second-brain' },
+        },
+        notes_subdir = '',
+        daily_notes = { folder = 'daily' },
+        completion = { nvim_cmp = false },
+        ui = { enable = true },
+      })
+
+      local group = vim.api.nvim_create_augroup('ObsidianKeymaps', { clear = true })
+      vim.api.nvim_create_autocmd('FileType', {
+        group = group,
+        pattern = 'markdown',
+        callback = function(args)
+          local opts = { buffer = args.buf, silent = true, noremap = true }
+          vim.keymap.set('n', '<leader>oo', '<cmd>ObsidianOpen<CR>', opts)
+          vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', opts)
+          vim.keymap.set('n', '<leader>oq', '<cmd>ObsidianQuickSwitch<CR>', opts)
+          vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', opts)
+          vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', opts)
+          vim.keymap.set('n', '<leader>of', '<cmd>ObsidianFollowLink<CR>', opts)
+        end,
+      })
+    end,
+  }
+end)
