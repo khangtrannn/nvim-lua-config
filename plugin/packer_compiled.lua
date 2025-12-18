@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/ubuntu/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/home/ubuntu/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/home/ubuntu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/home/ubuntu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/ubuntu/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/khangtrann/.cache/nvim/packer_hererocks/2.1.1765228720/share/lua/5.1/?.lua;/Users/khangtrann/.cache/nvim/packer_hererocks/2.1.1765228720/share/lua/5.1/?/init.lua;/Users/khangtrann/.cache/nvim/packer_hererocks/2.1.1765228720/lib/luarocks/rocks-5.1/?.lua;/Users/khangtrann/.cache/nvim/packer_hererocks/2.1.1765228720/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/khangtrann/.cache/nvim/packer_hererocks/2.1.1765228720/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,30 +76,30 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["mini.nvim"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/mini.nvim",
     url = "https://github.com/nvim-mini/mini.nvim"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["render-markdown.nvim"] = {
-    config = { "\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\0\23disable_background\1\2\0\0\tdiff\1\0\31\14highlight\23RenderMarkdownCode\fenabled\2\19highlight_info\27RenderMarkdownCodeInfo\23highlight_fallback\31RenderMarkdownCodeFallback\rlanguage\2\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\21highlight_border\29RenderMarkdownCodeBorder\nbelow\b▀\nwidth\tfull\nabove\b▄\19language_right\5\18language_left\5\17render_modes\1\20language_border\b█\vborder\thide\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\21highlight_inline\29RenderMarkdownCodeInline\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\nstyle\tfull\rposition\tleft\23conceal_delimiters\2\tsign\2\nsetup\20render-markdown\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\1\tcode\0\23disable_background\1\2\0\0\tdiff\1\0\"\vborder\thide\21highlight_border\29RenderMarkdownCodeBorder\23highlight_language\0\rpriority\0\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\nstyle\tfull\nbelow\b▀\nabove\b▄\19language_right\5\18language_left\5\21highlight_inline\29RenderMarkdownCodeInline\20language_border\b█\23highlight_fallback\31RenderMarkdownCodeFallback\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\19highlight_info\27RenderMarkdownCodeInfo\nwidth\tfull\23disable_background\0\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\rposition\tleft\rlanguage\2\23conceal_delimiters\2\tsign\2\17render_modes\1\fenabled\2\14highlight\23RenderMarkdownCode\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
     url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   }
 }
@@ -111,7 +111,7 @@ vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown.nvim ]]
 
 -- Config for: render-markdown.nvim
-try_loadstring("\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\0\23disable_background\1\2\0\0\tdiff\1\0\31\14highlight\23RenderMarkdownCode\fenabled\2\19highlight_info\27RenderMarkdownCodeInfo\23highlight_fallback\31RenderMarkdownCodeFallback\rlanguage\2\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\21highlight_border\29RenderMarkdownCodeBorder\nbelow\b▀\nwidth\tfull\nabove\b▄\19language_right\5\18language_left\5\17render_modes\1\20language_border\b█\vborder\thide\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\21highlight_inline\29RenderMarkdownCodeInline\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\nstyle\tfull\rposition\tleft\23conceal_delimiters\2\tsign\2\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+try_loadstring("\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\1\tcode\0\23disable_background\1\2\0\0\tdiff\1\0\"\vborder\thide\21highlight_border\29RenderMarkdownCodeBorder\23highlight_language\0\rpriority\0\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\nstyle\tfull\nbelow\b▀\nabove\b▄\19language_right\5\18language_left\5\21highlight_inline\29RenderMarkdownCodeInline\20language_border\b█\23highlight_fallback\31RenderMarkdownCodeFallback\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\19highlight_info\27RenderMarkdownCodeInfo\nwidth\tfull\23disable_background\0\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\rposition\tleft\rlanguage\2\23conceal_delimiters\2\tsign\2\17render_modes\1\fenabled\2\14highlight\23RenderMarkdownCode\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
 
 time([[Sequenced loading]], false)
 
