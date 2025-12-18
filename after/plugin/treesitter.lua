@@ -5,12 +5,7 @@ end
 
 ts_config.setup({
   ensure_installed = {
-    "markdown",
-    "markdown_inline",
     "html",
-    "latex",
-    "yaml",
-
     "typescript",
     "javascript",
   },

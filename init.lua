@@ -21,9 +21,10 @@ vim.opt.updatetime = 300
 vim.opt.timeoutlen = 400
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.conceallevel = 2
+vim.opt.guifont = 'JetBrainsMono Nerd Font:h14'
 
 -- Load plugins
 require('plugins')
 
--- Colorscheme (GitHub Dark)
-pcall(vim.cmd.colorscheme, 'github_dark_default')
+-- Colorscheme (Tokyonight)
+pcall(vim.cmd.colorscheme, 'tokyonight-night')

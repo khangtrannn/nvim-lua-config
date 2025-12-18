@@ -2,27 +2,21 @@ return require("packer").startup(function(use)
   -- Packer can manage itself
   use("wbthomason/packer.nvim")
 
-  -- =========================
-  -- Tree-sitter (required)
-  -- =========================
+  -- Colorscheme
+  use("folke/tokyonight.nvim")
+
   use({
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   })
 
-  -- =========================
-  -- Icons (recommended)
-  -- =========================
-  use("nvim-tree/nvim-web-devicons")
+  use("nvim-mini/mini.nvim")
 
-  -- =========================
-  -- Markdown rendering
-  -- =========================
   use({
     "MeanderingProgrammer/render-markdown.nvim",
     after = "nvim-treesitter",
     requires = {
-      "nvim-tree/nvim-web-devicons",
+      "nvim-mini/mini.nvim", opt = true
     },
     config = function()
       require("render-markdown").setup({})
