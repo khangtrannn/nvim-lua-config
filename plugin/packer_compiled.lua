@@ -90,7 +90,7 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["render-markdown.nvim"] = {
-    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\0\23disable_background\1\2\0\0\tdiff\1\0\31\14highlight\23RenderMarkdownCode\fenabled\2\19highlight_info\27RenderMarkdownCodeInfo\23highlight_fallback\31RenderMarkdownCodeFallback\rlanguage\2\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\21highlight_border\29RenderMarkdownCodeBorder\nbelow\b▀\nwidth\tfull\nabove\b▄\19language_right\5\18language_left\5\17render_modes\1\20language_border\b█\vborder\thide\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\21highlight_inline\29RenderMarkdownCodeInline\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\nstyle\tfull\rposition\tleft\23conceal_delimiters\2\tsign\2\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -111,7 +111,7 @@ vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown.nvim ]]
 
 -- Config for: render-markdown.nvim
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+try_loadstring("\27LJ\2\n�\5\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\tcode\1\0\0\23disable_background\1\2\0\0\tdiff\1\0\31\14highlight\23RenderMarkdownCode\fenabled\2\19highlight_info\27RenderMarkdownCodeInfo\23highlight_fallback\31RenderMarkdownCodeFallback\rlanguage\2\15inline_pad\3\0\17inline_right\5\16inline_left\5\vinline\2\21highlight_border\29RenderMarkdownCodeBorder\nbelow\b▀\nwidth\tfull\nabove\b▄\19language_right\5\18language_left\5\17render_modes\1\20language_border\b█\vborder\thide\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\16left_margin\3\0\21highlight_inline\29RenderMarkdownCodeInline\17language_pad\3\0\18language_info\2\18language_name\2\18language_icon\2\nstyle\tfull\rposition\tleft\23conceal_delimiters\2\tsign\2\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
 
 time([[Sequenced loading]], false)
 
