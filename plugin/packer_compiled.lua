@@ -74,39 +74,41 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["github-nvim-theme"] = {
-    config = { "\27LJ\2\na\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\16transparent\1\nsetup\17github-theme\frequire\0" },
+  ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
+    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n‹\3\0\1\b\0\19\00045\1\1\0009\2\0\0=\2\2\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\a\0'\6\b\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\t\0'\6\n\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\v\0'\6\f\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\r\0'\6\14\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\15\0'\6\16\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\17\0'\6\18\0\18\a\1\0B\2\5\1K\0\1\0 <cmd>ObsidianFollowLink<CR>\15<leader>of\27<cmd>ObsidianToday<CR>\15<leader>ot\25<cmd>ObsidianNew<CR>\15<leader>on!<cmd>ObsidianQuickSwitch<CR>\15<leader>oq\28<cmd>ObsidianSearch<CR>\15<leader>os\26<cmd>ObsidianOpen<CR>\15<leader>oo\6n\bset\vkeymap\bvim\vbuffer\1\0\2\vsilent\2\fnoremap\2\bbufú\3\1\0\6\0\23\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\0016\0\f\0009\0\r\0009\0\14\0'\2\15\0005\3\16\0B\0\3\0026\1\f\0009\1\r\0019\1\17\1'\3\18\0005\4\19\0=\0\20\0043\5\21\0=\5\22\4B\1\3\1K\0\1\0\rcallback\0\ngroup\1\0\1\fpattern\rmarkdown\rFileType\24nvim_create_autocmd\1\0\1\nclear\2\20ObsidianKeymaps\24nvim_create_augroup\bapi\bvim\aui\1\0\1\venable\2\15completion\1\0\1\rnvim_cmp\1\16daily_notes\1\0\1\vfolder\ndaily\15workspaces\1\0\1\17notes_subdir\5\1\0\2\tpath\19~/second-brain\tname\17second-brain\nsetup\robsidian\frequire\0" },
+  ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
-    url = "https://github.com/epwalsh/obsidian.nvim"
+    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
+  ["render-markdown.nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    load_after = {},
     loaded = true,
-    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
+    needs_bufread = false,
+    path = "/home/ubuntu/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
+    url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: obsidian.nvim
-time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n‹\3\0\1\b\0\19\00045\1\1\0009\2\0\0=\2\2\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\a\0'\6\b\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\t\0'\6\n\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\v\0'\6\f\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\r\0'\6\14\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\15\0'\6\16\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\17\0'\6\18\0\18\a\1\0B\2\5\1K\0\1\0 <cmd>ObsidianFollowLink<CR>\15<leader>of\27<cmd>ObsidianToday<CR>\15<leader>ot\25<cmd>ObsidianNew<CR>\15<leader>on!<cmd>ObsidianQuickSwitch<CR>\15<leader>oq\28<cmd>ObsidianSearch<CR>\15<leader>os\26<cmd>ObsidianOpen<CR>\15<leader>oo\6n\bset\vkeymap\bvim\vbuffer\1\0\2\vsilent\2\fnoremap\2\bbufú\3\1\0\6\0\23\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\0016\0\f\0009\0\r\0009\0\14\0'\2\15\0005\3\16\0B\0\3\0026\1\f\0009\1\r\0019\1\17\1'\3\18\0005\4\19\0=\0\20\0043\5\21\0=\5\22\4B\1\3\1K\0\1\0\rcallback\0\ngroup\1\0\1\fpattern\rmarkdown\rFileType\24nvim_create_autocmd\1\0\1\nclear\2\20ObsidianKeymaps\24nvim_create_augroup\bapi\bvim\aui\1\0\1\venable\2\15completion\1\0\1\rnvim_cmp\1\16daily_notes\1\0\1\vfolder\ndaily\15workspaces\1\0\1\17notes_subdir\5\1\0\2\tpath\19~/second-brain\tname\17second-brain\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
-time([[Config for obsidian.nvim]], false)
--- Config for: github-nvim-theme
-time([[Config for github-nvim-theme]], true)
-try_loadstring("\27LJ\2\na\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\16transparent\1\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
-time([[Config for github-nvim-theme]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd render-markdown.nvim ]]
+
+-- Config for: render-markdown.nvim
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
