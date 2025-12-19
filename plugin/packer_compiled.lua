@@ -90,7 +90,7 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["render-markdown.nvim"] = {
-    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\5\0\30\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\3=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\3=\3\15\0025\3\16\0005\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\0025\3\26\0=\3\27\0025\3\28\0=\3\29\2B\0\2\1K\0\1\0\nimage\1\0\3\fenabled\2\15max_height\3\30\14max_width\3d\tlink\1\0\2\14hyperlink\1\fenabled\2\ntable\1\0\2\vpreset\tgrid\fenabled\2\nquote\1\0\2\ticon\b▋\fenabled\2\rcheckbox\fchecked\1\0\2\14highlight\26RenderMarkdownChecked\ticon\t☑ \14unchecked\1\0\2\14highlight\28RenderMarkdownUnchecked\ticon\t☐ \1\0\1\fenabled\2\vbullet\nicons\1\5\0\0\b●\b○\b◆\b◇\1\0\1\fenabled\2\tdash\1\0\3\ticon\b─\fenabled\2\nwidth\tfull\tcode\1\0\t\vborder\tthin\14min_width\3\20\14right_pad\3\2\rleft_pad\3\2\nstyle\tfull\tsign\2\nbelow\b▀\fenabled\2\nabove\b▄\fheading\16backgrounds\1\4\0\0\fDiffAdd\15DiffChange\15DiffDelete\1\0\2\fenabled\2\tsign\2\1\0\2\18max_file_size\3\1\fenabled\2\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -111,7 +111,7 @@ vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown.nvim ]]
 
 -- Config for: render-markdown.nvim
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+try_loadstring("\27LJ\2\n�\5\0\0\5\0\30\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\3=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\3=\3\15\0025\3\16\0005\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\0025\3\26\0=\3\27\0025\3\28\0=\3\29\2B\0\2\1K\0\1\0\nimage\1\0\3\fenabled\2\15max_height\3\30\14max_width\3d\tlink\1\0\2\14hyperlink\1\fenabled\2\ntable\1\0\2\vpreset\tgrid\fenabled\2\nquote\1\0\2\ticon\b▋\fenabled\2\rcheckbox\fchecked\1\0\2\14highlight\26RenderMarkdownChecked\ticon\t☑ \14unchecked\1\0\2\14highlight\28RenderMarkdownUnchecked\ticon\t☐ \1\0\1\fenabled\2\vbullet\nicons\1\5\0\0\b●\b○\b◆\b◇\1\0\1\fenabled\2\tdash\1\0\3\ticon\b─\fenabled\2\nwidth\tfull\tcode\1\0\t\vborder\tthin\14min_width\3\20\14right_pad\3\2\rleft_pad\3\2\nstyle\tfull\tsign\2\nbelow\b▀\fenabled\2\nabove\b▄\fheading\16backgrounds\1\4\0\0\fDiffAdd\15DiffChange\15DiffDelete\1\0\2\fenabled\2\tsign\2\1\0\2\18max_file_size\3\1\fenabled\2\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
 
 time([[Sequenced loading]], false)
 
