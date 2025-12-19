@@ -19,24 +19,7 @@ return require("packer").startup(function(use)
       "nvim-mini/mini.nvim", opt = true
     },
     config = function()
-      require("render-markdown").setup({
-        code = {
-          enabled = true,
-          sign = true,
-          style = 'normal',
-          position = 'left',
-          language_pad = 0,
-          disable_background = {},
-          width = 'full',
-          left_pad = 1,
-          right_pad = 1,
-          min_width = 0,
-          border = 'thin',
-          above = '▄',
-          below = '▀',
-          highlight = 'RenderMarkdownCode',
-        },
-      })
+      require("render-markdown").setup({})
     end,
   })
 end)
