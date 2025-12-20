@@ -62,3 +62,7 @@ require('plugins')
 
 -- Colorscheme (Tokyonight)
 pcall(vim.cmd.colorscheme, 'tokyonight-night')
+
+-- Enhance code block background visibility for render-markdown
+vim.api.nvim_set_hl(0, 'RenderMarkdownCode', { bg = '#1a1b26' })
+vim.api.nvim_set_hl(0, 'RenderMarkdownCodeInline', { bg = '#292e42' })

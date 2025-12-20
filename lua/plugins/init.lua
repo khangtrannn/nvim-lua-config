@@ -22,28 +22,29 @@ return require("packer").startup(function(use)
       require("render-markdown").setup({
         -- PERFORMANCE: Enable rendering with optimizations for cursor movement
         enabled = true,
-        max_file_size = 1.5, -- MB, slightly increased for better experience
+        max_file_size = 1.5,
+        debounce = 100,
 
-        -- PERFORMANCE: Throttle rendering during cursor movement
-        debounce = 100, -- ms, reduces re-renders while moving cursor
+        -- CRITICAL: Remove ModeChanged to prevent flicker when switching modes
+        -- This keeps rendering consistent between insert/normal/visual modes
+        change_events = {
+          'BufWinEnter',
+          'CursorMoved',
+          'TextChanged',
+          'WinScrolled',
+        },
 
         -- PERFORMANCE: Optimize rendering for markdown
         heading = {
           enabled = true,
-          sign = true,
-          backgrounds = { 'DiffAdd', 'DiffChange', 'DiffDelete' },
+          sign = false,
+          backgrounds = {},
         },
 
         code = {
           enabled = true,
-          sign = true,
-          style = 'normal', -- Changed from 'full' for better performance
-          left_pad = 1,     -- Reduced padding
-          right_pad = 1,    -- Reduced padding
-          min_width = 0,    -- No minimum width enforcement
-          border = 'thin',
-          above = '▄',
-          below = '▀',
+          sign = false,
+          style = 'full', -- This automatically sets all the right defaults
         },
 
         dash = {
@@ -70,7 +71,7 @@ return require("packer").startup(function(use)
 
         table = {
           enabled = true,
-          preset = 'round', -- Changed from 'grid' - lighter rendering
+          preset = 'round',
         },
 
         link = {
@@ -80,14 +81,15 @@ return require("packer").startup(function(use)
 
         image = {
           enabled = true,
-          max_width = 80,  -- Reduced from 100
-          max_height = 20, -- Reduced from 30
+          max_width = 80,
+          max_height = 20,
         },
 
-        -- PERFORMANCE: Optimize rendering pipeline
-        render_modes = { 'n', 'c' }, -- Only render in normal and command mode, not insert
+        -- PERFORMANCE: Keep rendering consistent across modes to avoid flicker
+        -- Only show raw text on the cursor line, not whole buffer
+        render_modes = true, -- Render in all modes for consistency
         anti_conceal = {
-          enabled = true, -- Show raw markdown when cursor is on the line
+          enabled = true, -- Show raw markdown only on cursor line for editing
         },
       })
     end,
