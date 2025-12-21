@@ -44,7 +44,14 @@ return require("packer").startup(function(use)
         code = {
           enabled = true,
           sign = false,
-          style = 'full', -- This automatically sets all the right defaults
+          width = 'full',
+          left_pad = 0,
+          right_pad = 0,
+          min_width = 0,
+          border = 'thick',
+          language = true,
+          disable_background = false,
+          highlight = 'RenderMarkdownCode',
         },
 
         dash = {
@@ -90,6 +97,9 @@ return require("packer").startup(function(use)
         render_modes = true, -- Render in all modes for consistency
         anti_conceal = {
           enabled = true, -- Show raw markdown only on cursor line for editing
+          ignore = {
+            code_background = true, -- Always show code background even on cursor line
+          },
         },
       })
     end,

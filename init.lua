@@ -7,7 +7,8 @@ vim.g.mapleader = ' '
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = false
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 4
 vim.opt.signcolumn = 'yes'
@@ -57,6 +58,10 @@ vim.opt.updatecount = 0
 
 vim.opt.guifont = 'JetBrainsMono Nerd Font:h14'
 
+-- Navigate wrapped lines visually
+vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
+
 -- Load plugins
 require('plugins')
 
@@ -64,5 +69,6 @@ require('plugins')
 pcall(vim.cmd.colorscheme, 'tokyonight-night')
 
 -- Enhance code block background visibility for render-markdown
-vim.api.nvim_set_hl(0, 'RenderMarkdownCode', { bg = '#1a1b26' })
+-- Using darker backgrounds that contrast with tokyonight-night (#1a1b26 base)
+vim.api.nvim_set_hl(0, 'RenderMarkdownCode', { bg = '#16161e' })
 vim.api.nvim_set_hl(0, 'RenderMarkdownCodeInline', { bg = '#292e42' })

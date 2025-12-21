@@ -6,7 +6,7 @@ end
 -- High-performance treesitter configuration for markdown-heavy workload
 configs.setup({
   -- Install and maintain these parsers
-  ensure_installed = { 'markdown', 'markdown_inline', 'lua', 'vim' },
+  ensure_installed = { 'markdown', 'markdown_inline', 'lua', 'vim', 'java' },
 
   -- Auto-sync parser updates
   auto_install = true,
