@@ -12,6 +12,26 @@ return require("packer").startup(function(use)
 
   use("nvim-mini/mini.nvim")
 
+  -- Telescope fuzzy finder
+  use({
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+
+  -- Telescope FZF native for better performance
+  use({
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "make",
+  })
+
+  -- Markdown preview in browser
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = { "markdown" },
+  })
+
   use({
     "MeanderingProgrammer/render-markdown.nvim",
     after = "nvim-treesitter",

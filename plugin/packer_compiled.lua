@@ -74,6 +74,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mini.nvim"] = {
     loaded = true,
     path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/mini.nvim",
@@ -89,13 +96,28 @@ _G.packer_plugins = {
     path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["render-markdown.nvim"] = {
-    config = { "\27LJ\2\nâ\b\0\0\5\0#\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0=\3\f\0025\3\r\0005\4\14\0=\4\15\3=\3\16\0025\3\17\0005\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\0025\3\27\0=\3\28\0025\3\29\0=\3\30\0025\3\31\0005\4 \0=\4!\3=\3\"\2B\0\2\1K\0\1\0\17anti_conceal\vignore\1\0\1\20code_background\2\1\0\2\fenabled\2\vignore\0\nimage\1\0\3\fenabled\2\14max_width\3P\15max_height\3\20\tlink\1\0\2\fenabled\2\14hyperlink\1\ntable\1\0\2\fenabled\2\vpreset\nround\nquote\1\0\2\fenabled\2\ticon\b‚ñã\rcheckbox\fchecked\1\0\2\14highlight\26RenderMarkdownChecked\ticon\t‚òë \14unchecked\1\0\2\14highlight\28RenderMarkdownUnchecked\ticon\t‚òê \1\0\3\fenabled\2\14unchecked\0\fchecked\0\vbullet\nicons\1\5\0\0\b‚óè\b‚óã\b‚óÜ\b‚óá\1\0\2\fenabled\2\nicons\0\tdash\1\0\3\fenabled\2\nwidth\tfull\ticon\b‚îÄ\tcode\1\0\n\14highlight\23RenderMarkdownCode\fenabled\2\23disable_background\1\rlanguage\2\vborder\nthick\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\nwidth\tfull\tsign\1\fheading\16backgrounds\1\0\3\fenabled\2\16backgrounds\0\tsign\1\18change_events\1\5\0\0\16BufWinEnter\16CursorMoved\16TextChanged\16WinScrolled\1\0\15\fheading\0\vbullet\0\nquote\0\ntable\0\tdash\0\18change_events\0\rdebounce\3d\18max_file_size\4\0ÄÄ‡ˇ\3\fenabled\2\tcode\0\17anti_conceal\0\rcheckbox\0\17render_modes\2\tlink\0\nimage\0\nsetup\20render-markdown\frequire\0" },
+    config = { "\27LJ\2\nâ\b\0\0\5\0#\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0=\3\f\0025\3\r\0005\4\14\0=\4\15\3=\3\16\0025\3\17\0005\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\0025\3\27\0=\3\28\0025\3\29\0=\3\30\0025\3\31\0005\4 \0=\4!\3=\3\"\2B\0\2\1K\0\1\0\17anti_conceal\vignore\1\0\1\20code_background\2\1\0\2\vignore\0\fenabled\2\nimage\1\0\3\14max_width\3P\15max_height\3\20\fenabled\2\tlink\1\0\2\14hyperlink\1\fenabled\2\ntable\1\0\2\vpreset\nround\fenabled\2\nquote\1\0\2\ticon\b‚ñã\fenabled\2\rcheckbox\fchecked\1\0\2\ticon\t‚òë \14highlight\26RenderMarkdownChecked\14unchecked\1\0\2\ticon\t‚òê \14highlight\28RenderMarkdownUnchecked\1\0\3\14unchecked\0\fchecked\0\fenabled\2\vbullet\nicons\1\5\0\0\b‚óè\b‚óã\b‚óÜ\b‚óá\1\0\2\nicons\0\fenabled\2\tdash\1\0\3\nwidth\tfull\ticon\b‚îÄ\fenabled\2\tcode\1\0\n\23disable_background\1\rlanguage\2\fenabled\2\vborder\nthick\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\14highlight\23RenderMarkdownCode\nwidth\tfull\tsign\1\fheading\16backgrounds\1\0\3\16backgrounds\0\tsign\1\fenabled\2\18change_events\1\5\0\0\16BufWinEnter\16CursorMoved\16TextChanged\16WinScrolled\1\0\15\18change_events\0\rdebounce\3d\18max_file_size\4\0ÄÄ‡ˇ\3\fenabled\2\nquote\0\17anti_conceal\0\rcheckbox\0\tlink\0\nimage\0\tcode\0\17render_modes\2\fheading\0\vbullet\0\ntable\0\tdash\0\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
     path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
     url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/khangtrann/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
@@ -111,9 +133,16 @@ vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown.nvim ]]
 
 -- Config for: render-markdown.nvim
-try_loadstring("\27LJ\2\nâ\b\0\0\5\0#\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0=\3\f\0025\3\r\0005\4\14\0=\4\15\3=\3\16\0025\3\17\0005\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\0025\3\27\0=\3\28\0025\3\29\0=\3\30\0025\3\31\0005\4 \0=\4!\3=\3\"\2B\0\2\1K\0\1\0\17anti_conceal\vignore\1\0\1\20code_background\2\1\0\2\fenabled\2\vignore\0\nimage\1\0\3\fenabled\2\14max_width\3P\15max_height\3\20\tlink\1\0\2\fenabled\2\14hyperlink\1\ntable\1\0\2\fenabled\2\vpreset\nround\nquote\1\0\2\fenabled\2\ticon\b‚ñã\rcheckbox\fchecked\1\0\2\14highlight\26RenderMarkdownChecked\ticon\t‚òë \14unchecked\1\0\2\14highlight\28RenderMarkdownUnchecked\ticon\t‚òê \1\0\3\fenabled\2\14unchecked\0\fchecked\0\vbullet\nicons\1\5\0\0\b‚óè\b‚óã\b‚óÜ\b‚óá\1\0\2\fenabled\2\nicons\0\tdash\1\0\3\fenabled\2\nwidth\tfull\ticon\b‚îÄ\tcode\1\0\n\14highlight\23RenderMarkdownCode\fenabled\2\23disable_background\1\rlanguage\2\vborder\nthick\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\nwidth\tfull\tsign\1\fheading\16backgrounds\1\0\3\fenabled\2\16backgrounds\0\tsign\1\18change_events\1\5\0\0\16BufWinEnter\16CursorMoved\16TextChanged\16WinScrolled\1\0\15\fheading\0\vbullet\0\nquote\0\ntable\0\tdash\0\18change_events\0\rdebounce\3d\18max_file_size\4\0ÄÄ‡ˇ\3\fenabled\2\tcode\0\17anti_conceal\0\rcheckbox\0\17render_modes\2\tlink\0\nimage\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+try_loadstring("\27LJ\2\nâ\b\0\0\5\0#\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\0025\3\v\0=\3\f\0025\3\r\0005\4\14\0=\4\15\3=\3\16\0025\3\17\0005\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\22\0025\3\23\0=\3\24\0025\3\25\0=\3\26\0025\3\27\0=\3\28\0025\3\29\0=\3\30\0025\3\31\0005\4 \0=\4!\3=\3\"\2B\0\2\1K\0\1\0\17anti_conceal\vignore\1\0\1\20code_background\2\1\0\2\vignore\0\fenabled\2\nimage\1\0\3\14max_width\3P\15max_height\3\20\fenabled\2\tlink\1\0\2\14hyperlink\1\fenabled\2\ntable\1\0\2\vpreset\nround\fenabled\2\nquote\1\0\2\ticon\b‚ñã\fenabled\2\rcheckbox\fchecked\1\0\2\ticon\t‚òë \14highlight\26RenderMarkdownChecked\14unchecked\1\0\2\ticon\t‚òê \14highlight\28RenderMarkdownUnchecked\1\0\3\14unchecked\0\fchecked\0\fenabled\2\vbullet\nicons\1\5\0\0\b‚óè\b‚óã\b‚óÜ\b‚óá\1\0\2\nicons\0\fenabled\2\tdash\1\0\3\nwidth\tfull\ticon\b‚îÄ\fenabled\2\tcode\1\0\n\23disable_background\1\rlanguage\2\fenabled\2\vborder\nthick\14min_width\3\0\14right_pad\3\0\rleft_pad\3\0\14highlight\23RenderMarkdownCode\nwidth\tfull\tsign\1\fheading\16backgrounds\1\0\3\16backgrounds\0\tsign\1\fenabled\2\18change_events\1\5\0\0\16BufWinEnter\16CursorMoved\16TextChanged\16WinScrolled\1\0\15\18change_events\0\rdebounce\3d\18max_file_size\4\0ÄÄ‡ˇ\3\fenabled\2\nquote\0\17anti_conceal\0\rcheckbox\0\tlink\0\nimage\0\tcode\0\17render_modes\2\fheading\0\vbullet\0\ntable\0\tdash\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
 
 time([[Sequenced loading]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

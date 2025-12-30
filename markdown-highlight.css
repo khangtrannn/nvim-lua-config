@@ -1,0 +1,241 @@
+/* GitHub Dark theme for markdown-preview.nvim */
+/* Based on github-markdown-css dark theme */
+
+/* Code block styling matching GitHub */
+pre {
+  background-color: #151b23 !important;
+  border-radius: 6px !important;
+  padding: 16px !important;
+  margin: 16px 0 !important;
+  overflow: auto !important;
+  font-size: 85% !important;
+  line-height: 1.45 !important;
+  color: #f0f6fc !important;
+}
+
+code {
+  background-color: #656c7633 !important;
+  padding: 0.2em 0.4em !important;
+  margin: 0 !important;
+  font-size: 85% !important;
+  white-space: break-spaces !important;
+  border-radius: 6px !important;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace !important;
+}
+
+pre code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 100% !important;
+  word-break: normal !important;
+  white-space: pre !important;
+  border: 0 !important;
+}
+
+/* GitHub Primer Dark syntax highlighting */
+.hljs {
+  color: #f0f6fc !important;
+  background: #151b23 !important;
+}
+
+/* Comments - gray */
+.pl-c,
+.hljs-comment {
+  color: #9198a1 !important;
+  font-style: italic !important;
+}
+
+/* Constants, numbers, booleans - blue */
+.pl-c1,
+.hljs-number,
+.hljs-literal,
+.hljs-constant,
+.hljs-built_in {
+  color: #79c0ff !important;
+}
+
+/* Functions, methods - purple */
+.pl-e,
+.pl-en,
+.hljs-function,
+.hljs-title,
+.hljs-title.function {
+  color: #d2a8ff !important;
+}
+
+/* Variables, identifiers */
+.pl-smi,
+.pl-s .pl-s1,
+.hljs-variable,
+.hljs-params {
+  color: #f0f6fc !important;
+}
+
+/* HTML/XML tags - green */
+.pl-ent,
+.hljs-tag,
+.hljs-name {
+  color: #7ee787 !important;
+}
+
+/* Keywords - red/pink */
+.pl-k,
+.hljs-keyword,
+.hljs-type {
+  color: #ff7b72 !important;
+}
+
+/* Strings - light blue */
+.pl-s,
+.pl-pds,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sre,
+.pl-sr .pl-sra,
+.hljs-string,
+.hljs-regexp {
+  color: #a5d6ff !important;
+}
+
+/* Attributes - cyan */
+.hljs-attr,
+.hljs-attribute,
+.hljs-meta,
+.hljs-selector-attr {
+  color: #79c0ff !important;
+}
+
+/* Properties, orange */
+.pl-v,
+.pl-smw,
+.hljs-property {
+  color: #ffa657 !important;
+}
+
+/* Errors */
+.pl-bu,
+.hljs-deletion {
+  color: #f85149 !important;
+}
+
+/* Links - cyan */
+.hljs-link {
+  color: #a5d6ff !important;
+  text-decoration: underline !important;
+}
+
+/* Sections, headings - blue bold */
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms,
+.hljs-section {
+  font-weight: bold !important;
+  color: #1f6feb !important;
+}
+
+/* Quotes */
+.hljs-quote {
+  color: #9198a1 !important;
+  font-style: italic !important;
+}
+
+/* Additions (diffs) */
+.pl-mi1,
+.hljs-addition {
+  color: #aff5b4 !important;
+  background-color: #033a16 !important;
+}
+
+/* Deletions (diffs) */
+.pl-md,
+.hljs-deletion {
+  color: #ffdcd7 !important;
+  background-color: #67060c !important;
+}
+
+/* Bold text */
+.pl-mdr,
+.hljs-strong {
+  font-weight: bold !important;
+  color: #d2a8ff !important;
+}
+
+/* Emphasized/italic */
+.hljs-emphasis {
+  font-style: italic !important;
+}
+
+/* Symbols */
+.hljs-symbol {
+  color: #79c0ff !important;
+}
+
+/* Bullets */
+.hljs-bullet {
+  color: #ff7b72 !important;
+}
+
+/* Operators */
+.hljs-operator {
+  color: #ff7b72 !important;
+}
+
+/* Punctuation */
+.hljs-punctuation {
+  color: #f0f6fc !important;
+}
+
+/* Selectors (CSS) */
+.hljs-selector-tag {
+  color: #7ee787 !important;
+}
+
+.hljs-selector-class,
+.hljs-selector-id {
+  color: #d2a8ff !important;
+}
+
+.hljs-selector-pseudo {
+  color: #79c0ff !important;
+}
+
+/* Template variables */
+.hljs-template-variable {
+  color: #ffa657 !important;
+}
+
+/* Meta strings */
+.hljs-meta-string {
+  color: #a5d6ff !important;
+}
+
+/* Tag attributes */
+.hljs-tag .hljs-attr {
+  color: #79c0ff !important;
+}
+
+.hljs-tag .hljs-name {
+  color: #7ee787 !important;
+}
+
+/* Class names */
+.hljs-class .hljs-title {
+  color: #d2a8ff !important;
+}
+
+/* Function keywords */
+.hljs-function .hljs-keyword {
+  color: #ff7b72 !important;
+}
+
+.hljs-function .hljs-title {
+  color: #d2a8ff !important;
+}
+
+/* Code doctags */
+.hljs-comment .hljs-doctag {
+  color: #79c0ff !important;
+  font-weight: bold !important;
+}
