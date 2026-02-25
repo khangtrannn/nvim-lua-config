@@ -1,6 +1,7 @@
--- Enable treesitter highlighting for Neovim 0.10+
+local ENABLED_FILETYPES = { 'javascript', 'typescript', 'lua', 'markdown' }
+
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'javascript', 'typescript', 'lua', 'markdown' },
+  pattern = ENABLED_FILETYPES,
   callback = function(args)
     vim.treesitter.start(args.buf)
   end,
