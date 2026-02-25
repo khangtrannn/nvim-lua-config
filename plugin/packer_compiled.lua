@@ -97,7 +97,6 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["render-markdown.nvim"] = {
-    config = { "\27LJ\2\n›\5\0\0\a\0\31\0B6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\0015\0\b\0006\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\f\0005\5\14\0009\6\r\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\16\0005\5\18\0009\6\17\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\19\0005\5\21\0009\6\20\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\22\0005\5\24\0009\6\23\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\25\0005\5\27\0009\6\26\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\28\0005\5\30\0009\6\29\0=\6\15\5B\1\4\1K\0\1\0\1\0\1\abg\0\ah6\23RenderMarkdownH6Bg\1\0\1\abg\0\ah5\23RenderMarkdownH5Bg\1\0\1\abg\0\ah4\23RenderMarkdownH4Bg\1\0\1\abg\0\ah3\23RenderMarkdownH3Bg\1\0\1\abg\0\ah2\23RenderMarkdownH2Bg\abg\1\0\1\abg\0\ah1\23RenderMarkdownH1Bg\16nvim_set_hl\bapi\bvim\1\0\6\ah5\f#2d2a1f\ah3\f#2d231f\ah6\f#1f2d2d\ah2\f#1c2d1f\ah1\f#1f2d3d\ah4\f#2d1f2a\fheading\1\0\1\fheading\0\16backgrounds\1\0\1\16backgrounds\0\1\a\0\0\23RenderMarkdownH1Bg\23RenderMarkdownH2Bg\23RenderMarkdownH3Bg\23RenderMarkdownH4Bg\23RenderMarkdownH5Bg\23RenderMarkdownH6Bg\nsetup\20render-markdown\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -107,22 +106,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: mini.icons
-time([[Config for mini.icons]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15mini.icons\frequire\0", "config", "mini.icons")
-time([[Config for mini.icons]], false)
 -- Config for: github-nvim-theme
 time([[Config for github-nvim-theme]], true)
 try_loadstring("\27LJ\2\nj\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\1\0\1\16transparent\2\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
 time([[Config for github-nvim-theme]], false)
+-- Config for: mini.icons
+time([[Config for mini.icons]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15mini.icons\frequire\0", "config", "mini.icons")
+time([[Config for mini.icons]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd render-markdown.nvim ]]
-
--- Config for: render-markdown.nvim
-try_loadstring("\27LJ\2\n›\5\0\0\a\0\31\0B6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\0015\0\b\0006\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\f\0005\5\14\0009\6\r\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\16\0005\5\18\0009\6\17\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\19\0005\5\21\0009\6\20\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\22\0005\5\24\0009\6\23\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\25\0005\5\27\0009\6\26\0=\6\15\5B\1\4\0016\1\t\0009\1\n\0019\1\v\1)\3\0\0'\4\28\0005\5\30\0009\6\29\0=\6\15\5B\1\4\1K\0\1\0\1\0\1\abg\0\ah6\23RenderMarkdownH6Bg\1\0\1\abg\0\ah5\23RenderMarkdownH5Bg\1\0\1\abg\0\ah4\23RenderMarkdownH4Bg\1\0\1\abg\0\ah3\23RenderMarkdownH3Bg\1\0\1\abg\0\ah2\23RenderMarkdownH2Bg\abg\1\0\1\abg\0\ah1\23RenderMarkdownH1Bg\16nvim_set_hl\bapi\bvim\1\0\6\ah5\f#2d2a1f\ah3\f#2d231f\ah6\f#1f2d2d\ah2\f#1c2d1f\ah1\f#1f2d3d\ah4\f#2d1f2a\fheading\1\0\1\fheading\0\16backgrounds\1\0\1\16backgrounds\0\1\a\0\0\23RenderMarkdownH1Bg\23RenderMarkdownH2Bg\23RenderMarkdownH3Bg\23RenderMarkdownH4Bg\23RenderMarkdownH5Bg\23RenderMarkdownH6Bg\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
-
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
