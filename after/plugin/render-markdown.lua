@@ -31,6 +31,10 @@ require('render-markdown').setup({
       'RenderMarkdownH6',
     },
   },
+  code = {
+    inline_pad = 1,  -- Adds background-colored padding spaces
+    highlight_inline = 'RenderMarkdownCodeInline',
+  },
 })
 
 -- Define heading colors
@@ -48,3 +52,24 @@ for i = 1, 6 do
   vim.api.nvim_set_hl(0, 'RenderMarkdownH'..i, { fg = heading_colors[i].fg, bold = true })
   vim.api.nvim_set_hl(0, '@markup.heading.'..i..'.markdown', { fg = heading_colors[i].fg, bold = true })
 end
+
+-- Inline code highlighting
+vim.api.nvim_set_hl(0, 'RenderMarkdownCode', {
+  bg = '#2d333b',
+})
+vim.api.nvim_set_hl(0, 'RenderMarkdownCodeInline', {
+  bg = '#2d333b',
+  fg = '#f0883e',
+})
+
+-- Also set the treesitter group for inline code
+vim.api.nvim_set_hl(0, '@markup.raw.markdown_inline', {
+  bg = '#2d333b',
+  fg = '#f0883e',
+})
+
+-- Bold text highlighting
+vim.api.nvim_set_hl(0, '@markup.strong.markdown_inline', {
+  fg = '#ffa657',
+  bold = true,
+})
