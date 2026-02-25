@@ -27,10 +27,34 @@ return require("packer").startup(function(use)
     end
   })
 
+  -- Completion plugin
+  use('hrsh7th/nvim-cmp')
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+
   use({
     'MeanderingProgrammer/render-markdown.nvim',
     after = { 'nvim-treesitter' },
     requires = { 'nvim-mini/mini.icons' },
+  })
+
+  use({
+    'obsidian-nvim/obsidian.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('obsidian').setup({
+        legacy_commands = false,
+        ui = { enable = false },
+        workspaces = {
+          { name = "second-brain", path = "~/second-brain" },
+        },
+        completion = {
+          nvim_cmp = true,
+          match_case = false,
+          create_new = true,
+        },
+      })
+    end,
   })
 
 end)

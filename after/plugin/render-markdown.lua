@@ -1,8 +1,8 @@
 require('render-markdown').setup({
-  render_modes = { 'n', 'c', 'i' },
+  render_modes = { 'n', 'c', 'i', 'no' },  -- 'no' keeps rendering active when pressing d, c, y, etc.
   anti_conceal = {
     enabled = true,
-    disabled_modes = { 'n' },
+    disabled_modes = { 'n', 'no' },  -- 'no' = operator-pending mode (after pressing d, c, y, etc.)
     above = 0,
     below = 0,
   },
