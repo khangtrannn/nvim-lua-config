@@ -30,3 +30,6 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc
 
 -- Load plugins
 require('plugins')
+
+-- Colorscheme (protected call in case theme isn't installed yet)
+pcall(vim.cmd.colorscheme, 'github_dark_default')
