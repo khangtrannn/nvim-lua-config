@@ -1,21 +1,7 @@
--- ============================================================================
--- Terminal Transparency Configuration
--- ============================================================================
-
 local TRANSPARENT_GROUPS = {
   -- Base
   'Normal', 'NormalFloat', 'NormalNC', 'NormalSB',
-  -- UI Chrome
-  'SignColumn', 'SignColumnSB', 'LineNr', 'LineNrAbove', 'LineNrBelow',
-  'CursorLineNr', 'Folded', 'FoldColumn', 'EndOfBuffer',
-  'StatusLine', 'StatusLineNC', 'TabLine', 'TabLineFill', 'TabLineSel',
-  'VertSplit', 'WinSeparator', 'WinBar', 'WinBarNC', 'MenuSbar', 'Scrollbar',
-  -- Cursor
-  'CursorLine', 'CursorColumn', 'ColorColumn',
-  -- Matching & Reference
-  'MatchParen', 'LspReferenceText', 'LspReferenceRead', 'LspReferenceWrite',
-  -- Floating Windows
-  'FloatShadow', 'FloatShadowThrough',
+
   -- LSP
   'LspInlayHint',
 }

@@ -1,8 +1,3 @@
--- ============================================================================
--- Render Markdown Configuration
--- ============================================================================
-
--- Plugin setup
 require('render-markdown').setup({
   render_modes = { 'n', 'c', 'i' },
   anti_conceal = {
@@ -15,24 +10,11 @@ require('render-markdown').setup({
     width = 'block',
     left_pad = 1,
     right_pad = 1,
-    backgrounds = {
-      'RenderMarkdownH1Bg', 'RenderMarkdownH2Bg', 'RenderMarkdownH3Bg',
-      'RenderMarkdownH4Bg', 'RenderMarkdownH5Bg', 'RenderMarkdownH6Bg',
-    },
-    foregrounds = {
-      'RenderMarkdownH1', 'RenderMarkdownH2', 'RenderMarkdownH3',
-      'RenderMarkdownH4', 'RenderMarkdownH5', 'RenderMarkdownH6',
-    },
   },
   code = {
     inline_pad = 1,
-    highlight_inline = 'RenderMarkdownCodeInline',
   },
 })
-
--- ============================================================================
--- Highlight Definitions
--- ============================================================================
 
 local COLORS = {
   headings = {
